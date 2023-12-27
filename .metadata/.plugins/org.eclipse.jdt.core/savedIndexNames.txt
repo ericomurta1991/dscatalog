@@ -57,7 +57,6 @@ INDEX VERSION 1.134+/home/lerigoice/Documents/workspace-spring-tool-suite-4-4.20
 1678752660.index
 189951102.index
 2449006667.index
-1476245916.index
 497919790.index
 459035689.index
 3298286821.index
