@@ -1,12 +1,12 @@
 package com.devsuperior.dscatalog.services;
 
-import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -25,11 +25,22 @@ public class CategoryService {
 	private CategoryRepository repository;
 	
 	@Transactional(readOnly = true)
-	public List<CategoryDTO> findall(){
+	public Page<CategoryDTO> findallPage(PageRequest pageRequest) {
+		Page<Category> list = repository.findAll(pageRequest);
+							
+		return list.map(x -> new CategoryDTO(x));
+	
+		//the page is already a java8 stream, so there is no need to use the stream or .collect to do the conversions	
+	
+	/*
+	 public List<CategoryDTO> findall(){
 		List<Category> list = repository.findAll();
 							//I convert the object to stream and then convert it back to list
 		return list.stream().map(x -> new CategoryDTO(x)).collect(Collectors.toList());
-		
+	 
+	 */
+	
+	
 		/* using for structure
 		 * 
 		 	List<CategoryDTO> listDto = new ArrayList<>();

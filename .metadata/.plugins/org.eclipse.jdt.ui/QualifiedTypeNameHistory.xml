@@ -27,7 +27,6 @@
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ExceptionHandler"/>
     <fullyQualifiedTypeName name="com.devsuperior.dscatalog.services.exceptions.EntityNotFoundException"/>
     <fullyQualifiedTypeName name="com.devsuperior.dscatalog.resources.exceptions.StandardError"/>
-    <fullyQualifiedTypeName name="java.time.Instant"/>
     <fullyQualifiedTypeName name="jakarta.servlet.http.HttpServletRequest"/>
     <fullyQualifiedTypeName name="java.net.URI"/>
     <fullyQualifiedTypeName name="org.springframework.web.servlet.support.ServletUriComponentsBuilder"/>
@@ -47,4 +46,8 @@
     <fullyQualifiedTypeName name="java.lang.Void"/>
     <fullyQualifiedTypeName name="com.devsuperior.dscatalog.services.exceptions.DatabaseException"/>
     <fullyQualifiedTypeName name="org.springframework.dao.EmptyResultDataAccessException"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Column"/>
+    <fullyQualifiedTypeName name="java.time.Instant"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.PreUpdate"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.PrePersist"/>
 </qualifiedTypeNameHistroy>
